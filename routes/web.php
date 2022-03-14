@@ -31,7 +31,7 @@ Route::get('base', function () {
 Route::get('/dashboard/home',               [Dashboard::class,     'home']);
 
 
-Route::get('/seduc/',                [Seduc_Doc::class,                'index']);
+Route::get('/seduc',               [Seduc_Doc::class,                'index']);
 Route::get('/dashboard/conteudo',   [Dashboard::class,                'index']); 
 Route::get('/dashboard',            [Dashboard::class,                'index']); 
 

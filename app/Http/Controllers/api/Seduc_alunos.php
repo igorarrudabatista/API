@@ -15,6 +15,7 @@ class Seduc_alunos extends Controller
      * @return \Illuminate\Http\Response
      */
   
+     
     public function show(Request $request)
     {
        // $consulta = EducarTech::where('GoogleTurmaID', '=', '463445207008')->get();

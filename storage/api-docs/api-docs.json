@@ -1,0 +1,66 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "SEDUC API",
+        "version": "0.1"
+    },
+    "paths": {
+        "/api/seduc/professor": {
+            "get": {
+                "tags": [
+                    "Professor"
+                ],
+                "summary": "Get all Professor",
+                "description": "Fetches all the Asset records",
+                "operationId": "f984f12798b07888c788d87610b92c47",
+                "parameters": [
+                    {
+                        "name": "ESCOLA_ID",
+                        "in": "query",
+                        "description": "Listar todos os itens Tabela Professores",
+                        "required": false,
+                        "style": "form",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "example": "10766"
+                    },
+                    {
+                        "name": "ESCOLA_INEP",
+                        "in": "query",
+                        "description": "Listar todos os itens Tabela Professores",
+                        "required": false,
+                        "style": "form",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "example": "51034077"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "422": {
+                        "description": "Missing Data"
+                    },
+                    "401": {
+                        "description": "fail"
+                    },
+                    "404": {
+                        "description": "fail"
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}

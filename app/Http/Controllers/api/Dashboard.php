@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\EducarTech;
 use App\Models\EducarTechAlunos;
 
+
 class Dashboard extends Controller
 {
     /**
