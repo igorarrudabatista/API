@@ -17,7 +17,7 @@
                     {
                         "name": "ESCOLA_ID",
                         "in": "query",
-                        "description": "Listar todos os itens Tabela Professores",
+                        "description": "ID Escola ",
                         "required": false,
                         "style": "form",
                         "schema": {
@@ -31,7 +31,215 @@
                     {
                         "name": "ESCOLA_INEP",
                         "in": "query",
-                        "description": "Listar todos os itens Tabela Professores",
+                        "description": "ID Escola Inep",
+                        "required": false,
+                        "style": "form",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "example": "51034077"
+                    },
+                    {
+                        "name": "TURMA_GID",
+                        "in": "query",
+                        "description": "ID Escola Inep",
+                        "required": false,
+                        "style": "form",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "example": "463476534675"
+                    },
+                    {
+                        "name": "TURMA_NAME",
+                        "in": "query",
+                        "description": "ID Escola Inep",
+                        "required": false,
+                        "style": "form",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "example": "1\\u00ba - 2\\u00ba Ano B - EM Not"
+                    },
+                    {
+                        "name": "TURMA_SURNAME",
+                        "in": "query",
+                        "description": "ID Escola Inep",
+                        "required": false,
+                        "style": "form",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "example": "EEPA ACO - 2022"
+                    },
+                    {
+                        "name": "PROFESSOR_GID",
+                        "in": "query",
+                        "description": "ID Escola Inep",
+                        "required": false,
+                        "style": "form",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "example": "114806048526598013023"
+                    },
+                    {
+                        "name": "OWNER_EMAIL_GID",
+                        "in": "query",
+                        "description": "ID Escola Inep",
+                        "required": false,
+                        "style": "form",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "example": "escola.10766@edu.mt.gov.br"
+                    },
+                    {
+                        "name": "NivelTurma",
+                        "in": "query",
+                        "description": "ID Escola Inep",
+                        "required": false,
+                        "style": "form",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "example": "10,12"
+                    },
+                    {
+                        "name": "CodigoIbgeMunicipio",
+                        "in": "query",
+                        "description": "ID Escola Inep",
+                        "required": false,
+                        "style": "form",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "example": "5100102"
+                    },
+                    {
+                        "name": "NomeMunicipio",
+                        "in": "query",
+                        "description": "ID Escola Inep",
+                        "required": false,
+                        "style": "form",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "example": "ACORIZAL"
+                    },
+                    {
+                        "name": "CodigoIbgeDRE",
+                        "in": "query",
+                        "description": "ID Escola Inep",
+                        "required": false,
+                        "style": "form",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "example": "5108402"
+                    },
+                    {
+                        "name": "NomeDRE",
+                        "in": "query",
+                        "description": "ID Escola Inep",
+                        "required": false,
+                        "style": "form",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "example": "DRE VARZEA GRANDE"
+                    },
+                    {
+                        "name": "NomeEscola",
+                        "in": "query",
+                        "description": "ID Escola Inep",
+                        "required": false,
+                        "style": "form",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "example": "EE Ponce de Arruda"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "422": {
+                        "description": "Missing Data"
+                    },
+                    "401": {
+                        "description": "fail"
+                    },
+                    "404": {
+                        "description": "fail"
+                    }
+                }
+            }
+        },
+        "/api/seduc/alunos": {
+            "get": {
+                "tags": [
+                    "Alunos"
+                ],
+                "summary": "Get all Professor",
+                "description": "Fetches all the Asset records",
+                "operationId": "952d9dafd303b01c0d91f4aa66f674bb",
+                "parameters": [
+                    {
+                        "name": "ESCOLA_ID",
+                        "in": "query",
+                        "description": "ID Escola ",
+                        "required": false,
+                        "style": "form",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "example": "10766"
+                    },
+                    {
+                        "name": "ESCOLA_INEP",
+                        "in": "query",
+                        "description": "ID Escola Inep",
                         "required": false,
                         "style": "form",
                         "schema": {
