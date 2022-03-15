@@ -15,7 +15,42 @@ class Seduc_alunos extends Controller
      * @return \Illuminate\Http\Response
      */
   
-     
+     /** 
+*
+ * @OA\Get(
+ *     path="/api/seduc/alunos",
+ *     tags={"Alunos"},
+ * 
+ *     summary="Get all Alunos",
+ *     description="Fetches all the Asset records",
+
+ *  *     @OA\Parameter(
+     *         name="Alunos",
+     *         in="query",
+     *         description=" Todos os dados da tabela Alunos ",
+     *         required=false,
+     * 
+     *         @OA\Schema(
+     *             type="array",
+     *             @OA\Items(type="string"),
+     *         ),
+     *          example=" ",
+     *         style="form"),
+
+     * 
+     * 
+     *  
+
+ *     @OA\Response(response="200", description="OK"),
+ *     @OA\Response(response=422, description="Missing Data"),
+ *     @OA\Response(response=401, description="fail"),
+ *     @OA\Response(response=404, description="fail"),
+ * 
+ * 
+ * )
+ */
+
+
     public function show(Request $request)
     {
        // $consulta = EducarTech::where('GoogleTurmaID', '=', '463445207008')->get();
@@ -23,7 +58,8 @@ class Seduc_alunos extends Controller
       // $consulta = EducarTechalunos::query()->limit(5)->get();  
        
        $consulta = EducarTechalunos::get()->toJson(JSON_PRETTY_PRINT); 
-    
+       $consulta = EducarTechalunos::paginate(15);
+
        return response($consulta, 200); 
     }
 
