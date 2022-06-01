@@ -1,4 +1,5 @@
-## API REST -
+## API REST - Desenvolvido para a SEDUC MT -
+Objetivo: Consumir dados através do verbo GET.
 - **Laravel / Blade / jetstream Livewire**
 - **Banco de dados SQL**
 - **Bootstrap**
